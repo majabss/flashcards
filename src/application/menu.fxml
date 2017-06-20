@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox id="vbox" prefHeight="27.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MenuController">
+  <children>
+    <MenuBar fx:id="menuBar" prefHeight="27.0" prefWidth="400.0">
+      <menus>
+        <Menu text="Datei">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Speichern" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Beenden" />
+          </items>
+        </Menu>
+        <Menu text="Anlegen" fx:id="btNeu" />
+        <Menu text="Anzeigen" fx:id="btAnzeigen">
+          <items>
+            <Menu mnemonicParsing="false" text="Suche ...">
+              <items>
+                <MenuItem mnemonicParsing="false" text="nach Begriff" />
+                <MenuItem mnemonicParsing="false" text="nach Definition" />
+              </items>
+            </Menu>
+          </items>
+        </Menu>
+        <Menu text="Üben" fx:id="btUeben">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Alle Karten" />
+            <Menu mnemonicParsing="false" text="Note ... und abwärts">
+              <items>
+                <MenuItem mnemonicParsing="false" text="1" />
+                <MenuItem mnemonicParsing="false" text="2" />
+                <MenuItem mnemonicParsing="false" text="3" />
+                <MenuItem mnemonicParsing="false" text="4" />
+                <MenuItem mnemonicParsing="false" text="5" />
+                <MenuItem mnemonicParsing="false" text="6" />
+              </items>
+            </Menu>
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </children>
+</VBox>

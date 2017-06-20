@@ -1,9 +1,20 @@
 package start;
 
-import application.DataModel;
+import java.awt.TextField;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.Button;
 
 public class StartController {
-	// Model
+	@FXML TextArea txtDefinition;
+	@FXML TextField txtBegriff;
+
+	@FXML Button btSpeichern;
+	@FXML Button btAbbrechen;
+	@FXML Button btVerlinkung;
+	
+	/* Model
 	private DataModel model;
 	// View
 	private StartView view;
@@ -17,6 +28,6 @@ public class StartController {
 		view.show(model.getPrimaryStage());
 	}
 	
-	// EVENTHANDLER
+	// EVENTHANDLER */
 
 }

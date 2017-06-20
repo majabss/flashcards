@@ -1,8 +1,12 @@
-package start;
+/*package start;
 
+import java.awt.TextField;
+
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class StartView {
+	
 
 	public Object getAddBtn() {
 		// TODO Auto-generated method stub
@@ -19,4 +23,4 @@ public class StartView {
 	      stage.setScene(scene);
 	      stage.show();
 	   }
-}
+}*/

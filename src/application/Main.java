@@ -1,43 +1,48 @@
 package application;
-	
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Stage;
-import kartei.Karteikasten;
-import kartei.Karteiverwaltung;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-
+import javafx.stage.Stage;
+import kartei.Karteiverwaltung;
+import start.StartController;
 
 public class Main extends Application {
-	private Karteiverwaltung kk; 
-	
+	private Karteiverwaltung kk;
+
+	public static void main(String[] args) {
+		launch(args);
+	}
+
 	@Override
 	public void init() {
-		// kk mit Datei initialisiseren
+		// kk mit Datei initialisieren
 	}
+
 	@Override
 	public void start(Stage primaryStage) {
+		DataModel model = new DataModel(primaryStage);
+		
+		// Ersten Controller aufrufen
+		StartController startC = new StartController(model);
+		startC.show();
+
 		try {
 			// Main
-			Parent main = FXMLLoader.load(getClass().getResource("main.fxml"));	         
-	        Scene smain = new Scene(main);
-	        
+			Parent main = FXMLLoader.load(getClass().getResource("start.fxml"));
+			Scene smain = new Scene(main);
+
 			// BorderPane root = new BorderPane();
 			// Scene scene = new Scene(root,400,400);
-			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			
+			// scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+
 			// Hauptbühne setzen (Szene 1)
 			primaryStage.setTitle("Flashcards");
 			primaryStage.setScene(smain);
 			primaryStage.show();
-		} catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public static void main(String[] args) {
-		launch(args);
 	}
 }

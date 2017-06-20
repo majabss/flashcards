@@ -6,14 +6,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 
-<VBox id="vbox" prefHeight="427.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="controller.MenuProjektAnlegenController">
+<VBox id="vbox" prefHeight="427.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="start.StartController">
   <children>
     <fx:include source="menu.fxml" />
     <Pane maxWidth="400.0" prefHeight="400.0" prefWidth="400.0" stylesheets="/styles/stylesheet.css">
       <children>
-        <fx:define>
-          <ToggleGroup fx:id="myToggleGroup" />
-        </fx:define>
         <Label layoutX="14.0" layoutY="14.0" text="Neue Karteikarte anlegen">
           <font>
             <Font name="System Bold" size="16.0" />
@@ -21,11 +18,11 @@
         </Label>
         <Label layoutX="15.0" layoutY="50.0" text="Begriff" />
         <Label layoutX="15.0" layoutY="115.0" text="Definition" />
-        <TextField id="projektnummer" fx:id="txtBegriff" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="375.0" />
+        <TextField id="txtBegriff" fx:id="txtBegriff" layoutX="14.0" layoutY="75.0" prefHeight="25.0" prefWidth="375.0" />
         <TextArea fx:id="txtDefinition" layoutX="13.0" layoutY="139.0" prefHeight="200.0" prefWidth="375.0" wrapText="true" />
-        <Button id="erstelleProjekt" fx:id="btSpeichern" layoutX="224.0" layoutY="365.0" mnemonicParsing="false" text="Speichern" />
-        <Button id="erstelleProjekt" fx:id="btAbbrechen" layoutX="308.0" layoutY="365.0" mnemonicParsing="false" text="Abbrechen" />
-        <Button id="erstelleProjekt" fx:id="btVerlinkung" layoutX="14.0" layoutY="365.0" mnemonicParsing="false" text="Verlinkung hinzufügen" />
+        <Button id="btSpeichern" fx:id="btSpeichern" layoutX="224.0" layoutY="365.0" mnemonicParsing="false" text="Speichern" />
+        <Button id="btAbbrechen" fx:id="btAbbrechen" layoutX="308.0" layoutY="365.0" mnemonicParsing="false" text="Abbrechen" />
+        <Button id="btVerlinkung" fx:id="btVerlinkung" layoutX="14.0" layoutY="365.0" mnemonicParsing="false" text="Verlinkung hinzufügen" />
       </children>
     </Pane>
   </children>
